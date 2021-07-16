@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Enfield photography
-image: /img/home-jumbotron.jpg
+image: /img/landscape1.jpg
 heading: " "
 subheading: Amateur photograper based in Enfield, north London.
 mainpitch:
