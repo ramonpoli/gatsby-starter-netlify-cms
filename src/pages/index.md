@@ -19,12 +19,12 @@ main:
   heading: " "
   description: " "
   image1:
-    alt: " "
-    image: /img/blog-index.jpg
+    alt: " wellington road"
+    image: /img/enfield_photo1.jpg
   image2:
-    alt: " "
-    image: /img/jumbotron.jpg
+    alt: " colourful sky"
+    image: /img/enfield_photo2.jpg
   image3:
-    alt: " "
-    image: /img/home-jumbotron.jpg
+    alt: "red sky "
+    image: /img/enfield_photo3.jpg
 ---
