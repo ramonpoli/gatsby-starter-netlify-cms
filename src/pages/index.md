@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Enfield photography
 image: /img/landscape1.jpg
-heading: "Brother "
-subheading: Hodor Amateur photograper based in Enfield, north London.
+heading: ""
+subheading: Amateur photograper based in Enfield, north London.
 mainpitch:
   title: What do I photograph?
   description: Mainly anything that I see when I go for a walk around Enfield
@@ -20,11 +20,11 @@ main:
   description: " "
   image1:
     alt: " "
-    image: /img/blog-index.jpg
+    image: /img/enfield_photo1.jpg
   image2:
     alt: " "
-    image: /img/jumbotron.jpg
+    image: /img/enfield_photo2.jpg
   image3:
     alt: " "
-    image: /img/home-jumbotron.jpg
+    image: /img/enfield_photo3.jpg
 ---

@@ -23,6 +23,16 @@ export const IndexPageTemplate = ({
           <div className="section">
             <div className="columns">
               <div className="column is-10 is-offset-1">
+                <div
+                  className="full-width-image-container margin-top-0"
+                  style={{
+                    backgroundImage: `url(${
+                      !!image.childImageSharp
+                        ? image.childImageSharp.fluid.src
+                        : image
+                    })`,
+                  }}
+                ></div>
                 <div className="content">
                   <div className="content">
                     <div className="tile">
@@ -62,6 +72,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+  console.log("frontmatter :", frontmatter);
 
   return (
     <Layout>
@@ -105,31 +116,26 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
             text
           }
           heading
           description
         }
-        main {
-          image1 {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            alt
-          }
-        }
       }
     }
   }
 `;
+
+// main {
+//   image1 {
+//     image {
+//       childImageSharp {
+//         fluid(maxWidth: 2048, quality: 100) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//     alt
+//   }
+// }
