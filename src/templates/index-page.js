@@ -8,14 +8,12 @@ import "../stylesheets/index.sass";
 
 export const IndexPageTemplate = ({
   image,
-  title,
+  // title,
   heading,
-  subheading,
+  // subheading,
   mainpitch,
-  description,
-  main,
+  // main,
 }) => {
-  console.log("main :", main);
   return (
     <div>
       <section className="section section--gradient">
@@ -39,7 +37,7 @@ export const IndexPageTemplate = ({
                       <h1 className="title">{mainpitch.title}</h1>
                     </div>
                     <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
+                      <h3 className="title">{mainpitch.description}</h3>
                     </div>
                   </div>
                   <div className="columns">
@@ -47,7 +45,6 @@ export const IndexPageTemplate = ({
                       <h3 className="has-text-weight-semibold is-size-2">
                         {heading}
                       </h3>
-                      <p>{description}</p>
                     </div>
                   </div>
                 </div>
@@ -60,15 +57,7 @@ export const IndexPageTemplate = ({
   );
 };
 
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-};
+IndexPageTemplate.propTypes = {};
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -80,9 +69,8 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
+        heading={frontmatter.heading}
+        // main={frontmatter.main}
       />
     </Layout>
   );
@@ -102,40 +90,14 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        title
+        image
+        heading
         mainpitch {
           title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image
-            text
-          }
-          heading
           description
         }
       }
     }
   }
 `;
-
-// main {
-//   image1 {
-//     image {
-//       childImageSharp {
-//         fluid(maxWidth: 2048, quality: 100) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     alt
-//   }
-// }
