@@ -11,10 +11,6 @@ mainpitch:
     Instagram photo retouch is a very good tool to use before posting.
 description: This is an amateur photograpy website for the instagram account
   @enfield_photography
-intro:
-  blurbs: []
-  heading: " "
-  description: " "
 main:
   heading: " "
   description: " "
