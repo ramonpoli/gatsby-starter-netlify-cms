@@ -2,7 +2,6 @@
 templateKey: index-page
 title: Enfield photography
 image: /img/landscape1.jpg
-heading: ""
 subheading: Amateur photograper based in Enfield, north London.
 mainpitch:
   title: This is what I photograph
