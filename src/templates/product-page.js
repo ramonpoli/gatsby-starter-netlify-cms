@@ -19,14 +19,7 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
+    <div className="margin-top-0">
       <h2
         className="has-text-weight-bold is-size-1"
         style={{
@@ -60,7 +53,7 @@ export const ProductPageTemplate = ({
                 </div>
               </div>
               <div className="tile is-ancestor">
-                <div className="tile is-vertical">
+                {/* <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child">
@@ -78,7 +71,7 @@ export const ProductPageTemplate = ({
                       <PreviewCompatibleImage imageInfo={main.image3} />
                     </article>
                   </div>
-                </div>
+                </div> */}
               </div>
               <Testimonials testimonials={testimonials} />
               <div
@@ -105,7 +98,6 @@ export const ProductPageTemplate = ({
 );
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
@@ -134,7 +126,6 @@ const ProductPage = ({ data }) => {
   return (
     <Layout>
       <ProductPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
@@ -176,18 +167,6 @@ export const productPageQuery = graphql`
         main {
           heading
           description
-          image1 {
-            alt
-            image
-          }
-          image2 {
-            alt
-            image
-          }
-          image3 {
-            alt
-            image
-          }
         }
         testimonials {
           author
