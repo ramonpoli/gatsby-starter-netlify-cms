@@ -6,15 +6,8 @@ import Layout from "../components/Layout";
 
 import "../stylesheets/index.sass";
 
-export const IndexPageTemplate = ({
-  image,
-  // title,
-  heading,
-  // subheading,
-  mainpitch,
-  description,
-  // main,
-}) => {
+export const IndexPageTemplate = ({ image, title, heading, main }) => {
+  console.log("main :", typeof main);
   return (
     <div>
       <section className="section section--gradient">
@@ -35,10 +28,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="content">
                     <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="title">{mainpitch.description}</h3>
+                      <h1 className="title">{title}</h1>
                     </div>
                   </div>
                   <div className="columns">
@@ -47,9 +37,26 @@ export const IndexPageTemplate = ({
                         {heading}
                       </h3>
                     </div>
-                    <div className="column is-12">
-                      <p>{description}</p>
-                    </div>
+                  </div>
+                  <div className="columns">
+                    {Object.keys(main).map((image) => {
+                      const imageToUse = main[image].image;
+                      console.log("imageToUse :", imageToUse);
+                      return (
+                        <div className="column is-3">
+                          <div
+                            className="full-width-image-container margin-top-0"
+                            style={{
+                              backgroundImage: `url(${
+                                !!imageToUse.childImageSharp
+                                  ? imageToUse.childImageSharp.fluid.src
+                                  : imageToUse
+                              })`,
+                            }}
+                          ></div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -72,10 +79,8 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        mainpitch={frontmatter.mainpitch}
         heading={frontmatter.heading}
-        description={frontmatter.description}
-        // main={frontmatter.main}
+        main={frontmatter.main}
       />
     </Layout>
   );
@@ -104,10 +109,67 @@ export const pageQuery = graphql`
           }
         }
         heading
-        description
-        mainpitch {
-          title
-          description
+        main {
+          image1 {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
+          image2 {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
+          image3 {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
+          image4 {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
+          image5 {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
+          image6 {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
         }
       }
     }
