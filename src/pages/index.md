@@ -16,10 +16,10 @@ main:
     image: /img/enfield_photo3.jpg
   image4:
     alt: " wellington road"
-    image: /img/enfield_photo1.jpg
+    image: /img/river.jpg
   image5:
     alt: " colourful sky"
-    image: /img/enfield_photo2.jpg
+    image: /img/sunset.jpg
   image6:
     alt: "red sky "
     image: /img/enfield_photo3.jpg
