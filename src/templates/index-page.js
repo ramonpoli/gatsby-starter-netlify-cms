@@ -5,9 +5,11 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
 import "../stylesheets/index.sass";
+import FeatureGrid from "../components/Features";
 
 export const IndexPageTemplate = ({ image, title, heading, main }) => {
   console.log("main :", typeof main);
+  const gridItems = Object.keys(main).map((image) => main[image]);
   return (
     <div>
       <section className="section section--gradient">
@@ -38,26 +40,7 @@ export const IndexPageTemplate = ({ image, title, heading, main }) => {
                       </h3>
                     </div>
                   </div>
-                  <div className="columns">
-                    {Object.keys(main).map((image) => {
-                      const imageToUse = main[image].image;
-                      console.log("imageToUse :", imageToUse);
-                      return (
-                        <div className="column is-3">
-                          <div
-                            className="full-width-image-container margin-top-0"
-                            style={{
-                              backgroundImage: `url(${
-                                !!imageToUse.childImageSharp
-                                  ? imageToUse.childImageSharp.fluid.src
-                                  : imageToUse
-                              })`,
-                            }}
-                          ></div>
-                        </div>
-                      );
-                    })}
-                  </div>
+                  <FeatureGrid gridItems={gridItems} />
                 </div>
               </div>
             </div>
