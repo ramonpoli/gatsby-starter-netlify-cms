@@ -2,9 +2,8 @@
 templateKey: index-page
 title: Enfield photography
 image: /img/landscape1.jpg
-heading: Mainly anything that I see when I go for a walk around Enfield
-  town. I normally use my phone so don't expect professional pictures,
-  Instagram account => @enfield_photography
+heading: Amateur photographer in the north London area of Enfield, check out my
+  pictures on my Instagram account => @enfield_photography
 main:
   image1:
     alt: " wellington road"
@@ -17,10 +16,10 @@ main:
     image: /img/enfield_photo3.jpg
   image4:
     alt: " wellington road"
-    image: /img/enfield_photo1.jpg
+    image: /img/river.jpg
   image5:
     alt: " colourful sky"
-    image: /img/enfield_photo2.jpg
+    image: /img/sunset.jpg
   image6:
     alt: "red sky "
     image: /img/enfield_photo3.jpg
