@@ -13,8 +13,13 @@ $black: #2b2523
 html
   font-family:
 
-.navbar .navbar-menu
-  box-shadow: none !important
+.navbar
+  .navbar-menu
+    box-shadow: none !important
+.logo img, .navbar .navbar-item img
+  width: 50px
+  height: 50px
+  max-height: none
 
 .content .taglist
   list-style: none
@@ -81,8 +86,6 @@ html
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
@@ -99,11 +102,16 @@ $menu-label-color: $white-ter
 .menu-item
   color: $menu-item-color
   margin-right: 2em
+  &:hover
+    color: $primary
 .menu-label
   font-size: 1em !important
   text-align: left
 .social
   padding: 2em
+  color: $primary
+  strong
+    color: $menu-item-color
 .social a
   padding: .5em .5em .3em .5em
   border-radius: 1em
@@ -113,6 +121,8 @@ $menu-label-color: $white-ter
   height: 1em
   vertical-align: middle
   display: inline
+  &:hover
+    background-color: $primary
 
 // blog roll
 .blog-list-item.is-featured

@@ -1,8 +1,10 @@
+import { Link } from "gatsby";
 import React from "react";
 import useSiteMetadata from "./SiteMetadata";
+import logo from "../img/logo-ukraine.png";
 
 const Navbar = () => {
-  const { title, description } = useSiteMetadata();
+  const { title } = useSiteMetadata();
   return (
     <nav
       className="navbar is-transparent"
@@ -11,14 +13,15 @@ const Navbar = () => {
     >
       <div className="container">
         <div className="navbar-brand">
-          <div className="">
-            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-              {title}
-            </h1>
-            <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-              {description}
-            </h3>
-          </div>
+          <Link to="/" className="navbar-item logo" title="Logo">
+            <img
+              src={logo}
+              alt="enfield_photograpy logo with ukraine flag background"
+            />
+          </Link>
+          <h1 className="navbar-item has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+            {title}
+          </h1>
         </div>
       </div>
     </nav>
