@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import useSiteMetadata from "./SiteMetadata";
-import logo from "../img/logo-ukraine.png";
+import logo from "../img/logo.png";
 
 const Navbar = () => {
   const { title } = useSiteMetadata();
