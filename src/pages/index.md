@@ -13,7 +13,7 @@ main:
     image: /img/img_20220502_202902_184.jpg
   image3:
     alt: "red sky "
-    image: /img/img_20220620_214925_564.jpg
+    image: /img/img_20210322_215932_048.jpg
   image4:
     alt: " wellington road"
     image: /img/img_20220420_202057_530.jpg
