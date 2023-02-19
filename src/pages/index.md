@@ -1,13 +1,13 @@
 ---
 templateKey: index-page
 title: Enfield photography
-image: /img/img_20220522_221606_915.jpg
+image: /img/img_20210701_225517_314.jpg
 heading: Amateur photographer in the north London area of Enfield, check out my
   pictures on my Instagram account => @enfield_photography
 main:
   image1:
     alt: " wellington road"
-    image: /img/img_20220329_235741_680.jpg
+    image: /img/img_20210915_215453_923.webp
   image2:
     alt: " colourful sky"
     image: /img/img_20220502_202902_184.jpg
