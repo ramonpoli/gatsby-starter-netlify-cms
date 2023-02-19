@@ -9,7 +9,6 @@ import FeatureGrid from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({ image, title, heading, main }) => {
-  console.log("main :", typeof main);
   const gridItems = Object.keys(main).map((image) => main[image]);
   return (
     <div>
@@ -19,7 +18,7 @@ export const IndexPageTemplate = ({ image, title, heading, main }) => {
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <div
-                  className="full-width-image-container margin-top-0"
+                  className="full-width-image margin-top-0"
                   style={{
                     backgroundImage: `url(${
                       !!image.childImageSharp
