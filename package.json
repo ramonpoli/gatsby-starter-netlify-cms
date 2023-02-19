@@ -29,6 +29,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
+    "react-visual-grid": "^0.9.0",
     "uuid": "^7.0.0"
   },
   "keywords": [
