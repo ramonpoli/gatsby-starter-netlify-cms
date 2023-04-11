@@ -10,7 +10,7 @@ const Footer = class extends React.Component {
       <footer className="footer has-background-black has-text-white-ter ">
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter columns">
-            <div class="column is-2">
+            <div className="column is-2">
               <Link to="/" className="logo" title="Logo">
                 <img
                   src={logo}
@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
                 />
               </Link>
             </div>
-            <div class="column">
+            <div className="column">
               <section className="menu">
                 <Link className="menu-item" to="/">
                   Enfield Photography {new Date().getFullYear()}

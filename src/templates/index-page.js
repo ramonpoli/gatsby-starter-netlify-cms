@@ -5,12 +5,13 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
 import "../stylesheets/index.sass";
-import FeatureGrid from "../components/images/FeatureGrid/FeatureGrid";
-import FullWidthImage from "../components/images/FullWidthImage/FullWidthImage";
+import FeatureGrid from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
-export const IndexPageTemplate = ({ image, title, heading, main }) => {
-  const gridItems = Object.keys(main).map((image) => main[image]);
+export const IndexPageTemplate = ({ image, title, heading, main, ...rest }) => {
+  console.log("rest :", rest);
+  console.log("main :", main);
+  const gridItems = main && Object.keys(main).map((image) => main[image]);
   return (
     <div>
       <section className="section section--gradient">
@@ -18,13 +19,16 @@ export const IndexPageTemplate = ({ image, title, heading, main }) => {
           <div className="section">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <FullWidthImage
-                  img={
-                    !!image.childImageSharp
-                      ? image.childImageSharp.fluid.src
-                      : image
-                  }
-                />
+                <div
+                  className="full-width-image margin-top-0"
+                  style={{
+                    backgroundImage: `url(${
+                      !!image.childImageSharp
+                        ? image.childImageSharp.fluid.src
+                        : image
+                    })`,
+                  }}
+                ></div>
                 <div className="content">
                   <div className="content">
                     <div className="tile">
@@ -36,7 +40,7 @@ export const IndexPageTemplate = ({ image, title, heading, main }) => {
                       <p>{heading}</p>
                     </div>
                   </div>
-                  <FeatureGrid gridItems={gridItems} />
+                  {gridItems && <FeatureGrid gridItems={gridItems} />}
                 </div>
                 <div className="blog-posts">
                   <h1

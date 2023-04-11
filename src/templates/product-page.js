@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import FeatureGrid from "../components/images/FeatureGrid/FeatureGrid";
+import FeatureGrid from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 
