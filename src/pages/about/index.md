@@ -3,6 +3,8 @@ templateKey: about-page
 path: /about
 title: I'm an amateur photographer in north London
 ---
+![](/img/img_20230315_105312.jpg)
+
 I'm a photographer based in North London, and I've always had a passion for capturing the beauty of nature, people, and markets through my lens. Photography isn't just a hobby for me - it's a way of life that allows me to express my creativity and share my unique perspective with the world.
 
 When it comes to nature photography, I'm drawn to the natural world and find inspiration in the ever-changing landscapes and the intricate details of plants and animals. Whether I'm exploring the local parks or venturing further afield, I always have my camera at the ready to capture those special moments and fleeting glimpses of nature's beauty.
