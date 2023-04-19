@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-
 import Layout from "../components/Layout";
-
-import "../stylesheets/index.sass";
 import FeatureGrid from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import FullWidthImage from "../components/images/FullWidthImage/FullWidthImage";
+import "../stylesheets/index.sass";
 
-export const IndexPageTemplate = ({ image, title, heading, main, ...rest }) => {
-  console.log("rest :", rest);
-  console.log("main :", main);
+export const IndexPageTemplate = ({ image, title, heading, main }) => {
   const gridItems = main && Object.keys(main).map((image) => main[image]);
   return (
     <div>
@@ -19,16 +16,13 @@ export const IndexPageTemplate = ({ image, title, heading, main, ...rest }) => {
           <div className="section">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <div
-                  className="full-width-image margin-top-0"
-                  style={{
-                    backgroundImage: `url(${
-                      !!image.childImageSharp
-                        ? image.childImageSharp.fluid.src
-                        : image
-                    })`,
-                  }}
-                ></div>
+                <FullWidthImage
+                  img={
+                    !!image.childImageSharp
+                      ? image.childImageSharp.fluid.src
+                      : image
+                  }
+                />
                 <div className="content">
                   <div className="content">
                     <div className="tile">
@@ -43,15 +37,7 @@ export const IndexPageTemplate = ({ image, title, heading, main, ...rest }) => {
                   {gridItems && <FeatureGrid gridItems={gridItems} />}
                 </div>
                 <div className="blog-posts">
-                  <h1
-                    className="has-text-weight-bold is-size-1"
-                    style={{
-                      boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-                      backgroundColor: "#f40",
-                      color: "white",
-                      padding: "1rem",
-                    }}
-                  >
+                  <h1 className="has-text-weight-bold is-size-1 box-header">
                     Latest Stories
                   </h1>
                   <section className="section">
